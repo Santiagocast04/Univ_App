@@ -11,7 +11,13 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require activestorage
 //= require turbolinks
 //= require materialize
 //= require_tree .
+
+$( document ).on('turbolinks:load',function() {
+    $(".dropdown-trigger").dropdown();
+    $('.sidenav').sidenav();
+})
